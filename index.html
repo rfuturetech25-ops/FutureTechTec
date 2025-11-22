@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Future Teck — Kids Programming Courses</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <style>
+      :root {
+        --ft-primary: #0f5fd8; /* vibrant blue */
+        --ft-primary-light: #3b82f6; /* bright light blue */
+        --ft-primary-dark: #1e3a8a; /* deep dark blue */
+        --ft-secondary: #06b6d4; /* cyan blue */
+        --ft-neutral-50: #f8fafc; /* ultra white */
+        --ft-neutral-100: #f1f5f9; /* bright white */
+        --ft-neutral-200: #e2e8f0; /* light blue-gray */
+        --ft-neutral-700: #334155; /* dark gray-blue */
+        --ft-neutral-900: #0f172a; /* near black */
+        --ft-white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: linear-gradient(
+          135deg,
+          #f8fafc 0%,
+          #e0f2fe 50%,
+          #f0f9ff 100%
+        );
+        color: var(--ft-neutral-900);
+        -webkit-font-smoothing: antialiased;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", sans-serif;
+        line-height: 1.6;
+      }
+
+      #courses-grid {
+        align-items: stretch;
+      }
+
+      .card-course {
+        border: 1.5px solid var(--ft-neutral-200);
+        border-radius: 18px;
+        overflow: hidden;
+        transition: all 0.35s cubic-bezier(0.2, 0.9, 0.3, 1);
+        cursor: pointer;
+        background: linear-gradient(135deg, var(--ft-white) 0%, #f0f9ff 100%);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        box-shadow: 0 4px 20px rgba(15, 93, 216, 0.1);
+        position: relative;
+        animation: cardIn 0.6s ease both;
+      }
+
+      .card-course::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, #0f5fd8, #3b82f6, #06b6d4);
+        box-shadow: 0 2px 8px rgba(15, 93, 216, 0.2);
+      }
+
+      .card-course:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 48px rgba(15, 93, 216, 0.18);
+        border-color: var(--ft-primary-light);
+        background: linear-gradient(135deg, var(--ft-white) 0%, #e0f2fe 100%);
+      }
+
+      .card-course .card-img-top {
+        height: 180px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.35s ease;
+      }
+
+      .card-course:hover .card-img-top {
+        transform: scale(1.05);
+      }
+
+      .card-body {
+        flex-grow: 1;
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card-title {
+        font-weight: 700;
+        color: var(--ft-primary-dark);
+        margin-bottom: 10px;
+        font-size: 17px;
+        line-height: 1.3;
+      }
+
+      .card-body p {
+        color: var(--ft-neutral-700);
+        font-size: 14px;
+        margin: 0;
+        font-weight: 500;
+      }
+
+      @keyframes cardIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px) scale(0.98);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      /* Hero section */
+      #home {
+        padding: 80px 0 60px;
+      }
+
+      #home h1 {
+        background: linear-gradient(135deg, #0f5fd8 0%, #1e3a8a 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        line-height: 1.15;
+        letter-spacing: -0.5px;
+      }
+
+      #home .lead {
+        color: var(--ft-neutral-700);
+        font-size: 1.15rem;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+      }
+
+      /* About section */
+      #about {
+        padding: 60px 0;
+      }
+
+      #about .card {
+        border: 1.5px solid var(--ft-neutral-200) !important;
+        border-radius: 16px;
+        background: linear-gradient(
+          135deg,
+          var(--ft-white) 0%,
+          #f0f9ff 100%
+        ) !important;
+        box-shadow: 0 8px 24px rgba(15, 93, 216, 0.08) !important;
+      }
+
+      #about h3 {
+        color: var(--ft-primary-dark);
+        font-weight: 700;
+        font-size: 28px;
+      }
+
+      #about p {
+        color: var(--ft-neutral-700);
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      @media (max-width: 768px) {
+        #home h1 {
+          font-size: 2rem;
+        }
+        #home .lead {
+          font-size: 1rem;
+        }
+        .card-course .card-img-top {
+          height: 140px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar injected by common.js -->
+
+    <!-- MAIN CONTENT -->
+    <main class="container py-5" id="app">
+      <!-- HOME / COURSES -->
+      <section id="home">
+        <div class="text-center mb-5">
+          <h1>Future Teck — Programming Courses for Kids</h1>
+          <p class="lead">
+            Learn coding through playful, project-based courses designed for
+            curious minds.
+          </p>
+        </div>
+
+        <div class="row g-4" id="courses-grid">
+          <!-- cards injected by JS -->
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="d-none">
+        <div class="card border-0">
+          <div class="card-body p-5">
+            <h3>About Future Teck</h3>
+            <p>
+              Future Teck offers friendly programming courses for kids aged
+              7–14. We focus on hands-on projects, creativity and problem
+              solving. Each course is designed to make learning fun and
+              engaging, with real-world projects kids can be proud of.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer injected by common.js -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // --- Data: courses with online images and lessons ---
+      const COURSES = [
+        {
+          id: "scratch",
+          title: "Scratch Programming",
+          image:
+            "https://images.unsplash.com/photo-1593642634367-d91a135587b5?q=80&w=1200&auto=format&fit=crop",
+          description: "Blocks-based coding: animations, stories and games.",
+        },
+        {
+          id: "python",
+          title: "Python for Kids",
+          image:
+            "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop",
+          description: "Text-based coding with simple projects and puzzles.",
+        },
+        {
+          id: "web",
+          title: "Web Development",
+          image:
+            "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200&auto=format&fit=crop",
+          description: "HTML, CSS and fun interactive web pages.",
+        },
+        {
+          id: "robotics",
+          title: "Robotics & Physical Computing",
+          image: "https://picsum.photos/seed/robotics/1200/800",
+          description: "Make robots move and sensors talk to code.",
+        },
+        {
+          id: "ai",
+          title: "Intro to AI & Machine Learning",
+          image:
+            "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop",
+          description: "Friendly AI concepts and interactive experiments.",
+        },
+        {
+          id: "game-dev",
+          title: "Game Development Basics",
+          image: "https://picsum.photos/seed/gamedev/1200/800",
+          description: "Design and build simple 2D games.",
+        },
+        {
+          id: "mobile",
+          title: "Intro to Mobile Apps",
+          image: "https://picsum.photos/seed/mobile/1200/800",
+          description: "Create simple mobile apps and UI prototypes.",
+        },
+        {
+          id: "data",
+          title: "Data & Visualization",
+          image: "https://picsum.photos/seed/data/1200/800",
+          description: "Collect data and tell stories with charts.",
+        },
+        {
+          id: "electronics",
+          title: "Basics of Electronics",
+          image: "https://picsum.photos/seed/electronics/1200/800",
+          description: "Simple circuits and breadboard projects.",
+        },
+        {
+          id: "minecraft-mods",
+          title: "Minecraft Modding",
+          image: "https://picsum.photos/seed/minecraft/1200/800",
+          description: "Learn logic and scripting through Minecraft mods.",
+        },
+        {
+          id: "maker",
+          title: "Maker & 3D Printing",
+          image: "https://picsum.photos/seed/maker/1200/800",
+          description: "Design and print your own small objects.",
+        },
+        {
+          id: "uiux",
+          title: "UI / UX Fundamentals",
+          image: "https://picsum.photos/seed/uiux/1200/800",
+          description: "Design kid-friendly interfaces and experiences.",
+        },
+        {
+          id: "cybersec",
+          title: "Junior Cybersecurity",
+          image: "https://picsum.photos/seed/cyber/1200/800",
+          description: "Safety, privacy and basic security concepts.",
+        },
+        {
+          id: "animation",
+          title: "Creative Animation",
+          image: "https://picsum.photos/seed/animation/1200/800",
+          description: "Make short animations and motion stories.",
+        },
+        {
+          id: "math-coding",
+          title: "Math with Code",
+          image: "https://picsum.photos/seed/mathcode/1200/800",
+          description: "Explore maths concepts through small programs.",
+        },
+      ];
+
+      // Render courses grid
+      const grid = document.getElementById("courses-grid");
+      function renderCourses() {
+        grid.innerHTML = "";
+        COURSES.forEach((c) => {
+          const col = document.createElement("div");
+          col.className = "col-sm-6 col-md-4 col-lg-3";
+          col.innerHTML = `
+            <div class="card card-course" onclick="location.href='courses/${c.id}.html'" onkeypress="(event.key==='Enter') && (location.href='courses/${c.id}.html')" role="button" tabindex="0">
+              <img src="${c.image}" class="card-img-top" alt="${c.title}">
+              <div class="card-body">
+                <h5 class="card-title">${c.title}</h5>
+                <p class="small">${c.description}</p>
+              </div>
+            </div>
+          `;
+          grid.appendChild(col);
+        });
+      }
+
+      // Navigation / view logic
+      const homeSection = document.getElementById("home");
+      const aboutSection = document.getElementById("about");
+
+      function showHome() {
+        location.hash = "";
+        homeSection.classList.remove("d-none");
+        aboutSection.classList.add("d-none");
+      }
+
+      function showAbout() {
+        location.hash = "#about";
+        homeSection.classList.add("d-none");
+        aboutSection.classList.remove("d-none");
+      }
+
+      renderCourses();
+      showHome();
+    </script>
+
+    <!-- Shared navbar/footer injection -->
+    <script src="assets/common.js" defer></script>
+  </body>
+</html>

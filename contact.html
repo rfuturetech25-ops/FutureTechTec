@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us — Future Teck</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <style>
+      .contact-hero {
+        padding: 80px 20px 60px;
+        text-align: center;
+        background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+      }
+
+      .contact-hero h1 {
+        background: linear-gradient(135deg, #0f5fd8 0%, #1e3a8a 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 16px;
+      }
+
+      .contact-hero p {
+        color: #334155;
+        font-size: 1.1rem;
+        font-weight: 500;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .contact-section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: start;
+      }
+
+      .contact-form {
+        background: linear-gradient(135deg, var(--ft-white) 0%, #f0f9ff 100%);
+        border: 1.5px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 8px 24px rgba(15, 93, 216, 0.08);
+      }
+
+      .contact-form h2 {
+        color: #1e3a8a;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 24px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        color: #334155;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1.5px solid #e2e8f0;
+        border-radius: 8px;
+        font-family: inherit;
+        font-size: 14px;
+        color: #0f172a;
+        transition: all 0.2s;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #0f5fd8;
+        box-shadow: 0 0 0 3px rgba(15, 93, 216, 0.1);
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(135deg, #0f5fd8, #3b82f6);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.2s;
+        box-shadow: 0 4px 12px rgba(15, 93, 216, 0.2);
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(15, 93, 216, 0.3);
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      .info-card {
+        background: linear-gradient(135deg, var(--ft-white) 0%, #f0f9ff 100%);
+        border: 1.5px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 28px;
+        box-shadow: 0 8px 24px rgba(15, 93, 216, 0.08);
+      }
+
+      .info-card h3 {
+        color: #0f5fd8;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .info-card p {
+        color: #334155;
+        font-size: 15px;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .info-card a {
+        color: #0f5fd8;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s;
+      }
+
+      .info-card a:hover {
+        color: #1e3a8a;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .social-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(15, 93, 216, 0.1);
+        border: 1.5px solid #e2e8f0;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #0f5fd8;
+        text-decoration: none;
+        transition: all 0.2s;
+        font-weight: 600;
+      }
+
+      .social-icon:hover {
+        background: #0f5fd8;
+        color: white;
+        border-color: #0f5fd8;
+      }
+
+      .hours {
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid #e2e8f0;
+      }
+
+      .hours h4 {
+        color: #334155;
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .hours p {
+        color: #334155;
+        font-size: 13px;
+        margin: 4px 0;
+      }
+
+      @media (max-width: 768px) {
+        .contact-hero h1 {
+          font-size: 2rem;
+        }
+        .contact-container {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+        .contact-form {
+          padding: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar injected by common.js -->
+
+    <main>
+      <!-- Hero Section -->
+      <div class="contact-hero">
+        <h1>Get In Touch</h1>
+        <p>
+          Have questions? We'd love to hear from you. Reach out to our team
+          anytime!
+        </p>
+      </div>
+
+      <!-- Contact Section -->
+      <section class="contact-section">
+        <div class="contact-container">
+          <!-- Contact Form -->
+          <div class="contact-form">
+            <h2>Send us a Message</h2>
+            <form>
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="John Doe"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="john@example.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="How can we help?"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell us more about your inquiry..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <div class="info-card">
+              <h3>📍 Location</h3>
+              <p>
+                Future Teck Global Headquarters<br />
+                123 Innovation Street<br />
+                San Francisco, CA 94105<br />
+                United States
+              </p>
+            </div>
+
+            <div class="info-card">
+              <h3>📞 Contact Information</h3>
+              <p>
+                <strong>Email:</strong><br />
+                <a href="mailto:support@futureteck.com"
+                  >support@futureteck.com</a
+                ><br />
+                <a href="mailto:info@futureteck.com">info@futureteck.com</a>
+              </p>
+              <p style="margin-top: 12px">
+                <strong>Phone:</strong><br />
+                +1 (555) 123-4567<br />
+                +1 (555) 123-4568
+              </p>
+            </div>
+
+            <div class="info-card">
+              <h3>⏰ Business Hours</h3>
+              <p>
+                <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM PST<br />
+                <strong>Saturday:</strong> 10:00 AM - 4:00 PM PST<br />
+                <strong>Sunday:</strong> Closed
+              </p>
+              <div class="hours">
+                <h4>Response Time</h4>
+                <p>We typically respond within 24 hours</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <h3>🌐 Follow Us</h3>
+              <p>
+                Stay connected and follow us on social media for updates, tips,
+                and community highlights.
+              </p>
+              <div class="social-icons">
+                <a href="#" class="social-icon" title="Facebook">f</a>
+                <a href="#" class="social-icon" title="Twitter">𝕏</a>
+                <a href="#" class="social-icon" title="Instagram">📷</a>
+                <a href="#" class="social-icon" title="LinkedIn">in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer injected by common.js -->
+
+    <script src="assets/common.js" defer></script>
+  </body>
+</html>

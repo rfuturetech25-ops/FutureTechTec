@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Web Development — Future Teck</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <style>
+      .breadcrumb-nav {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        background: rgba(15, 93, 216, 0.08);
+        border: 1.5px solid rgba(15, 93, 216, 0.15);
+        border-radius: 10px;
+        margin-bottom: 24px;
+      }
+      .breadcrumb-nav a {
+        color: #0f5fd8;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        transition: all 0.2s;
+      }
+      .breadcrumb-nav a:hover {
+        color: #1e3a8a;
+      }
+      .breadcrumb-separator {
+        color: #cbd5e1;
+        font-weight: 300;
+      }
+      .lessons-header {
+        margin-top: 48px;
+        margin-bottom: 28px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid rgba(15, 93, 216, 0.15);
+      }
+      .lessons-header h3 {
+        color: #0f5fd8;
+        font-size: 22px;
+        font-weight: 700;
+        margin: 0 0 4px 0;
+      }
+      .lessons-subtitle {
+        color: #334155;
+        font-size: 14px;
+        font-weight: 500;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page container">
+      <div class="breadcrumb-nav">
+        <a href="../index.html">← Courses</a>
+        <span class="breadcrumb-separator">/</span>
+        <span style="color: #334155; font-weight: 600; font-size: 14px"
+          >Web Development</span
+        >
+      </div>
+
+      <h1>Web Development</h1>
+      <p>HTML, CSS and fun interactive web pages.</p>
+
+      <img
+        class="cardimg"
+        src="https://picsum.photos/seed/web/1200/600"
+        alt="Web Development"
+      />
+
+      <div class="lessons-header">
+        <h3>Course Lessons</h3>
+        <p class="lessons-subtitle">
+          Complete 12 lessons to master web development
+        </p>
+      </div>
+
+      <ol class="lessons-list">
+        <li>Intro to HTML</li>
+        <li>Elements & Structure</li>
+        <li>Styling with CSS</li>
+        <li>Selectors & Layout</li>
+        <li>Responsive Design</li>
+        <li>Introduction to JavaScript</li>
+        <li>DOM Basics</li>
+        <li>Events & Interaction</li>
+        <li>Forms & Validation</li>
+        <li>Deploying a Site</li>
+        <li>Portfolio Project</li>
+        <li>Review & Next Steps</li>
+      </ol>
+    </main>
+
+    <script src="../assets/common.js" defer></script>
+  </body>
+</html>

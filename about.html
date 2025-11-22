@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us — Future Teck</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <style>
+      .about-hero {
+        padding: 80px 20px 60px;
+        text-align: center;
+        background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+      }
+
+      .about-hero h1 {
+        background: linear-gradient(135deg, #0f5fd8 0%, #1e3a8a 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 16px;
+      }
+
+      .about-hero p {
+        color: #334155;
+        font-size: 1.1rem;
+        font-weight: 500;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section h2 {
+        color: #1e3a8a;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 32px;
+        text-align: center;
+      }
+
+      .mission-box {
+        background: linear-gradient(135deg, var(--ft-white) 0%, #f0f9ff 100%);
+        border: 1.5px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 8px 24px rgba(15, 93, 216, 0.08);
+        max-width: 800px;
+        margin: 0 auto 60px;
+      }
+
+      .mission-box h3 {
+        color: #0f5fd8;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      .mission-box p {
+        color: #334155;
+        font-size: 16px;
+        line-height: 1.7;
+        margin: 0;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 28px;
+        margin-bottom: 60px;
+      }
+
+      .feature-card {
+        background: linear-gradient(135deg, var(--ft-white) 0%, #f0f9ff 100%);
+        border: 1.5px solid #e2e8f0;
+        border-radius: 14px;
+        padding: 28px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(15, 93, 216, 0.06);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 32px rgba(15, 93, 216, 0.12);
+        border-color: #3b82f6;
+      }
+
+      .feature-icon {
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(135deg, #0f5fd8, #3b82f6);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 28px;
+        margin: 0 auto 16px;
+      }
+
+      .feature-card h4 {
+        color: #1e3a8a;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .feature-card p {
+        color: #334155;
+        font-size: 14px;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+      }
+
+      .team-member {
+        background: linear-gradient(135deg, var(--ft-white) 0%, #f0f9ff 100%);
+        border: 1.5px solid #e2e8f0;
+        border-radius: 14px;
+        padding: 24px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(15, 93, 216, 0.06);
+      }
+
+      .team-member-avatar {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #0f5fd8, #3b82f6);
+        border-radius: 50%;
+        margin: 0 auto 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+        font-size: 32px;
+      }
+
+      .team-member h4 {
+        color: #1e3a8a;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+
+      .team-member p {
+        color: #0f5fd8;
+        font-size: 13px;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      @media (max-width: 768px) {
+        .about-hero h1 {
+          font-size: 2rem;
+        }
+        .section {
+          padding: 40px 20px;
+        }
+        .mission-box {
+          padding: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar injected by common.js -->
+
+    <main>
+      <!-- Hero Section -->
+      <div class="about-hero">
+        <h1>About Future Teck</h1>
+        <p>
+          Empowering the next generation of creators through playful, hands-on
+          programming education.
+        </p>
+      </div>
+
+      <!-- Mission Section -->
+      <section class="section">
+        <div class="mission-box">
+          <h3>Our Mission</h3>
+          <p>
+            We believe every child has the potential to be a creator. Our
+            mission is to make programming accessible, fun, and engaging for
+            kids aged 7–14. Through hands-on projects, creative problem-solving,
+            and a supportive community, we inspire young minds to build the
+            future.
+          </p>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section class="section">
+        <h2>Why Choose Future Teck?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🎮</div>
+            <h4>Project-Based Learning</h4>
+            <p>
+              Learn by building real projects, games, and applications that
+              students can be proud of.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">👥</div>
+            <h4>Supportive Community</h4>
+            <p>
+              Join a community of young learners, mentors, and educators
+              dedicated to growth.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h4>Modern Curriculum</h4>
+            <p>
+              Courses covering everything from Scratch to Python, Web Dev, AI,
+              Robotics, and more.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⭐</div>
+            <h4>Expert Instructors</h4>
+            <p>
+              Learn from passionate educators with industry experience and a
+              love for teaching.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h4>Self-Paced Learning</h4>
+            <p>
+              Learn at your own pace with flexible schedules and lifetime access
+              to course materials.
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h4>Certificates & Recognition</h4>
+            <p>
+              Earn certificates upon completion and showcase your skills to
+              colleges and employers.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section class="section">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="team-member-avatar">SK</div>
+            <h4>Sarah Khan</h4>
+            <p>Founder & CEO</p>
+          </div>
+          <div class="team-member">
+            <div class="team-member-avatar">MC</div>
+            <h4>Michael Chen</h4>
+            <p>CTO & Head of Curriculum</p>
+          </div>
+          <div class="team-member">
+            <div class="team-member-avatar">EJ</div>
+            <h4>Elena Johnson</h4>
+            <p>Lead Instructor</p>
+          </div>
+          <div class="team-member">
+            <div class="team-member-avatar">RP</div>
+            <h4>Raj Patel</h4>
+            <p>Community Manager</p>
+          </div>
+          <div class="team-member">
+            <div class="team-member-avatar">AL</div>
+            <h4>Amira Lopez</h4>
+            <p>Curriculum Designer</p>
+          </div>
+          <div class="team-member">
+            <div class="team-member-avatar">DW</div>
+            <h4>David Wilson</h4>
+            <p>Technical Support Lead</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="section" style="text-align: center; padding: 60px 20px">
+        <h2>Our Impact</h2>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+          "
+        >
+          <div>
+            <div
+              style="
+                font-size: 2.5rem;
+                font-weight: 800;
+                color: #0f5fd8;
+                margin-bottom: 8px;
+              "
+            >
+              15,000+
+            </div>
+            <p style="color: #334155; margin: 0">Active Students</p>
+          </div>
+          <div>
+            <div
+              style="
+                font-size: 2.5rem;
+                font-weight: 800;
+                color: #0f5fd8;
+                margin-bottom: 8px;
+              "
+            >
+              150+
+            </div>
+            <p style="color: #334155; margin: 0">Course Hours</p>
+          </div>
+          <div>
+            <div
+              style="
+                font-size: 2.5rem;
+                font-weight: 800;
+                color: #0f5fd8;
+                margin-bottom: 8px;
+              "
+            >
+              95%
+            </div>
+            <p style="color: #334155; margin: 0">Student Satisfaction</p>
+          </div>
+          <div>
+            <div
+              style="
+                font-size: 2.5rem;
+                font-weight: 800;
+                color: #0f5fd8;
+                margin-bottom: 8px;
+              "
+            >
+              45
+            </div>
+            <p style="color: #334155; margin: 0">Countries Reached</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer injected by common.js -->
+
+    <script src="assets/common.js" defer></script>
+  </body>
+</html>
